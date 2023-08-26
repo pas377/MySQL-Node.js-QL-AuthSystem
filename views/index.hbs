@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <title>QuestLogIrl Login</title>
+</head>
+<body>
+    <div class="banner"></div>
+    <main class="data-box">
+        <section>
+            <h2> Welcome to Quest Log irl </h2>
+            <div class="button-container">
+                {{#if user}}
+                <button class="btn-primary"><li class="nav-item">
+                    <a href="/main-menu">Main Menu</a></li>
+                </button>
+                <button class="btn-primary"><li class="nav-item">
+                    <a href="/auth/logout">Logout</a></li>
+                </button>
+                {{else}}
+                <button class="btn-primary"><li class="nav-item">
+                    <a href="/login">Existing User</a></li>
+                </button>
+                <button class="btn-primary"><li class="nav-item">
+                    <a href="/register">New User</a></li>
+                </button>
+                {{/if}}
+            </div>       
+        </section>
+    </main>
+        <footer>&copy; Copyright 2023</footer>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">    
+</body>
+</html>

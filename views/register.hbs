@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <title>QuestLogIrl Registration</title>
+</head>
+<body>
+    <div class="banner"></div>
+        <div class="error-box-container">
+            {{#if message }}
+                <div class="error-box">
+                    <h5 class="alert alert-danger mt-4">{{message}}</h5>
+                </div>
+            {{/if}}
+        </div>
+    <main class="data-box">
+        <section>
+        <div>
+            <h2> Create an account </h2>
+            <form action="/auth/register" method="POST">
+                <div>
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" name="username">
+                </div>
+                <h4>. . .</h4>
+                <div>
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email" name="email">
+                </div>
+                <h4>. . .</h4>
+                <div>
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" name="password">
+                </div>
+                <h4>. . .</h4>
+                <div>
+                    <label for="passwordConfirm">Confirm Password</label>
+                    <input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm">
+                </div>
+            <button type="submit" class="btn btn-submit">Register User</button>
+            </form>
+            <h6>. . .</h6>
+          </div>
+        </section>
+    </main> 
+    <main class="register-box">
+        <h2> Sign up with Google</h2>
+        <button type="submit" class="btn btn-submit">Coming Soon</button>
+    </main>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+</body>
+</html>

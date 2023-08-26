@@ -1,0 +1,180 @@
+@import 'config', 'login', 'register', 'main-menu';
+
+body {
+    background: black;
+    color: white;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1;
+    .banner {
+        display: block;
+        height: 8rem;
+        width: calc(100% - 4rem);
+        max-width: 350px;
+        background: url('../img/banner.jpg') center top;
+        background-size: contain;
+        background-repeat: no-repeat;
+        // border: 0.12rem solid white;
+        margin: 2rem auto;
+        margin-bottom: 0;
+
+    }
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+} 
+
+h2 {
+    border-top: 0.12rem solid white;
+    padding-top: 0.6rem;
+    font-size: 2rem;
+    font-weight: 300;
+    font-size: 1.5rem;
+    border-bottom: 0.12rem solid white;
+    padding-bottom: .5rem; 
+}
+
+h3 {
+    border-bottom: 0.12rem solid white;
+    padding-bottom: .5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: .4rem;
+    padding-bottom: 0.8rem;
+}
+
+h4 {
+    color: transparent;
+}
+
+h5 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+h6 {
+    font-size: 1.5rem;
+    color: transparent;
+}
+
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    
+    li {
+      margin: 1rem;
+      padding: 0;
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+  }
+  
+
+header {
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    border: 0.12rem solid white;
+    padding: 2rem;
+    margin-inline: 2rem;
+    margin-top: 0.5rem;   
+    max-width: 500px;
+    display: block;
+    width: calc(100% - 4rem);
+    margin: 2rem auto;
+}
+
+main {
+    padding: 1rem;
+    text-align: center;
+    margin-inline: 2rem;
+    margin-top: 0.5rem;
+    border: 0.12rem solid white;    
+    min-height: 10rem;
+    max-height: 23.5rem;
+    max-width: 500px;
+    display: block;
+    width: calc(100% - 4rem);
+    margin: 2rem auto;
+    margin-bottom: 2rem;
+}
+
+.data-box {
+
+}
+
+form {
+    padding: 1rem;
+    width: 80%;  // Adjusted the width to be more in line with the desired design
+    margin: auto; // centers the form elements
+
+    // Input styling
+    input[type="text"], input[type="password"], input[type="email"] {
+        @each $property, $value in $input-style {
+            #{$property}: #{$value};
+        }
+    }
+
+}  
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertically align buttons within the container */
+    gap: 0.4rem;
+    margin-top: 0.4rem; /* Add margin to space buttons from the content above */
+}
+
+
+.btn-primary {
+    width: 8rem;
+    height: 3rem;
+    margin: 1rem auto 0;
+    display: block;
+}
+
+.btn-submit {
+
+}
+
+button {
+    @each $property, $value in $input-style {
+        #{$property}: #{$value};
+    }
+    width: fit-content;
+    margin: 15px auto 0;
+    display: block;
+}
+
+.nav-item {
+    list-style-type: none;
+}
+
+.error-box-container {
+    display: flex; /* Create a flex container */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+.error-box {
+    display: inline-block; /* Inline block to wrap content */
+    background-color: rgba(255, 0, 0, 0.5); /* Red with 50% transparency */
+    padding: 10px; /* Adjust as needed */
+    border-radius: 5px; /* Rounded corners for the box */
+}
+
+footer {
+    font-size: .8rem;
+    position: fixed;
+    bottom: 0.4rem;
+    right: 1rem;
+    text-align: right;
+    padding: 1rem;
+    color: white;
+}
